@@ -1,0 +1,64 @@
+# General OS generated files
+.DS_Store
+Thumbs.db
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+\$RECYCLE.BIN/
+[Dd]esktop\.ini
+
+# Linux files
+*~
+*.swp
+.fuse_hidden*
+
+# Net Core files
+/bin/
+/obj/
+/Release/
+/TestResults/
+/*.csproj.user
+/*.suo
+/*.user
+/*.pid
+/_ReSharper*/
+[Bb]uild/
+packages/
+*.nupkg
+*.snk
+*.tmp
+*.log
+*.shfbproj
+project.lock.json
+/Properties/launchSettings.json
+
+# Node.js and Next.js
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm*
+
+# React
+.eslintcache
+.module-cache/
+.rbuild/
+*.log
+tmp/
+temp/
+
+# VSCode
+.vscode/
+
+# Other
+/tmp/
+/temp/
+/log/
+/logs/
+
+

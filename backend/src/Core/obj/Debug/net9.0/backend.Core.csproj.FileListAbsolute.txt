@@ -1,0 +1,11 @@
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/bin/Debug/net9.0/backend.Core.deps.json
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/bin/Debug/net9.0/backend.Core.dll
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/bin/Debug/net9.0/backend.Core.pdb
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/backend.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/backend.Core.AssemblyInfoInputs.cache
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/backend.Core.AssemblyInfo.cs
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/backend.Core.csproj.CoreCompileInputs.cache
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/backend.Core.dll
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/refint/backend.Core.dll
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/backend.Core.pdb
+/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/Debug/net9.0/ref/backend.Core.dll
