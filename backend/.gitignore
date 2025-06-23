@@ -14,8 +14,8 @@ ehthumbs.db
 .fuse_hidden*
 
 # Net Core files
-/bin/
-/obj/
+/*/*/bin/
+/*/*/obj/
 /Release/
 /TestResults/
 /*.csproj.user
@@ -34,7 +34,7 @@ project.lock.json
 /Properties/launchSettings.json
 
 # Node.js and Next.js
-node_modules/
+/*/node_modules/
 .next/
 out/
 build/
