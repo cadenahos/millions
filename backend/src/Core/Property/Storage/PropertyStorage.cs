@@ -7,14 +7,7 @@ public class PropertyStorage : IPropertyRepository
     public Task<IEnumerable<PropertyEntity>> GetPropertiesAsync()
     {
         this.listProperties.Add(
-            new PropertyEntity
-            {
-                IdProperty = Guid.NewGuid(),
-                IdOwner = Guid.NewGuid(),
-                Name = "New york home",
-                Address = "New York",
-                Price = 1000000,
-            }
+            new PropertyEntity("23", "25", "New york home", "New York", 1000000, null, 199)
         );
         return Task.FromResult(listProperties.AsEnumerable());
     }

@@ -6,20 +6,19 @@ public class OwnerStorage : IOwnerRepository
 
     public Task<IEnumerable<Owner>> GetOwnersAsync()
     {
-        this.listOwners.Add(new Owner { IdOwner = Guid.NewGuid(), Name = "Owner 1" });
-        this.listOwners.Add(new Owner { IdOwner = Guid.NewGuid(), Name = "Owner 2" });
-
+        this.listOwners.Add(new Owner("124", "Owner 1", null, null, null));
+        this.listOwners.Add(new Owner("125", "Owner 5", null, null, null));
         return Task.FromResult(listOwners.AsEnumerable());
     }
 
     public Task<Owner> GetOwnerAsync(Guid idOwner)
     {
-        return Task.FromResult(listOwners.FirstOrDefault(x => x.IdOwner == idOwner));
+        return Task.FromResult(listOwners.FirstOrDefault(x => x.IdOwner.Equals(idOwner)));
     }
 
     public Task<Owner> AddOwnerAsync(Owner owner)
     {
-        owner.IdOwner = Guid.NewGuid();
+        owner.IdOwner = "3";
         listOwners.Add(owner);
 
         return Task.FromResult(owner);
@@ -35,7 +34,7 @@ public class OwnerStorage : IOwnerRepository
 
     public Task<bool> DeleteOwnerAsync(Guid idOwner)
     {
-        var index = listOwners.FindIndex(x => x.IdOwner == idOwner);
+        var index = listOwners.FindIndex(x => x.IdOwner.Equals(idOwner));
         listOwners.RemoveAt(index);
 
         return Task.FromResult(true);

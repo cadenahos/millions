@@ -4,6 +4,83 @@
     "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.RestApi/Adapter.RestApi.csproj": {}
   },
   "projects": {
+    "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.MongoDB/Adapter.MongoDB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.MongoDB/Adapter.MongoDB.csproj",
+        "projectName": "Adapter.MongoDB",
+        "projectPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.MongoDB/Adapter.MongoDB.csproj",
+        "packagesPath": "/Users/juanpablocadena/.nuget/packages/",
+        "outputPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.MongoDB/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/juanpablocadena/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/backend.Core.csproj": {
+                "projectPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/backend.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "MongoDB.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.RestApi/Adapter.RestApi.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +89,105 @@
         "projectPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.RestApi/Adapter.RestApi.csproj",
         "packagesPath": "/Users/juanpablocadena/.nuget/packages/",
         "outputPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.RestApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/juanpablocadena/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.MongoDB/Adapter.MongoDB.csproj": {
+                "projectPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Adapter.MongoDB/Adapter.MongoDB.csproj"
+              },
+              "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/backend.Core.csproj": {
+                "projectPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/backend.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/backend.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/backend.Core.csproj",
+        "projectName": "backend.Core",
+        "projectPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/backend.Core.csproj",
+        "packagesPath": "/Users/juanpablocadena/.nuget/packages/",
+        "outputPath": "/Users/juanpablocadena/Documents/pruebas-trabajo/million-full-stack/backend/src/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/juanpablocadena/.nuget/NuGet/NuGet.Config"
@@ -43,12 +219,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -61,9 +231,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
