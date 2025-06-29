@@ -61,4 +61,5 @@ temp/
 /log/
 /logs/
 
-
+#docker compose database mongo-db
+../mongodb_data/
