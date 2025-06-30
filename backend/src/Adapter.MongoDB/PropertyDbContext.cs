@@ -8,6 +8,7 @@ namespace Adapter.MongoDB;
 public class PropertyDbContext : DbContext
 {
     public DbSet<PropertyDocument> Properties { get; init; }
+    public DbSet<OwnerDocument> Owners { get; init; }
 
     public static PropertyDbContext Create(IMongoDatabase database) =>
         new(
@@ -23,5 +24,11 @@ public class PropertyDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<PropertyDocument>().ToCollection("properties");
+        modelBuilder.Entity<OwnerDocument>().ToCollection("owners");
+
+        modelBuilder.Entity<PropertyDocument>()
+            .HasOne(p => p.Owner)
+            .WithMany()
+            .HasForeignKey(p => p.IdOwner);
     }
 }

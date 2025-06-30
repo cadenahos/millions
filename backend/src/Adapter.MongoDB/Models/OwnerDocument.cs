@@ -9,10 +9,9 @@ public class OwnerDocument
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string IdOwner { get; set; }
-
     public string Name { get; set; }
-    public string Adress { get; set; }
-    public string Photo { get; set; }
+    public string? Adress { get; set; }
+    public string? Photo { get; set; }
     public DateTime? Birthday { get; set; }
 
     public Owner ToDomainEntity()
@@ -32,3 +31,4 @@ public class OwnerDocument
         };
     }
 }
+

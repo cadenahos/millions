@@ -3,7 +3,7 @@ namespace backend.Core;
 public class PropertyEntity
 {
     public string IdProperty { get; set; }
-    public string IdOwner { get; set; }
+    public Owner Owner { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public int Price { get; set; }
@@ -20,7 +20,7 @@ public class PropertyEntity
     //     }
     public PropertyEntity(
         string idProperty,
-        string idOwner,
+        Owner owner,
         string name,
         string address,
         int price,
@@ -29,7 +29,7 @@ public class PropertyEntity
     )
     {
         IdProperty = idProperty;
-        IdOwner = idOwner;
+        Owner = owner;
         Name = name;
         Address = address;
         Price = price;

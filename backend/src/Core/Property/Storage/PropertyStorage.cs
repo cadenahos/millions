@@ -6,8 +6,9 @@ public class PropertyStorage : IPropertyRepository
 
     public Task<IEnumerable<PropertyEntity>> GetPropertiesAsync()
     {
+        var owner = new Owner("1", "John Doe", "123 Main St", null, DateTime.Now.AddYears(-30));
         this.listProperties.Add(
-            new PropertyEntity("23", "25", "New york home", "New York", 1000000, null, 199)
+            new PropertyEntity("23", owner, "New york home", "New York", 1000000, "CX123", 1999)
         );
         return Task.FromResult(listProperties.AsEnumerable());
     }

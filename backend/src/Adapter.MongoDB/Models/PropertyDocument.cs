@@ -16,15 +16,19 @@ public class PropertyDocument
     public string CodeInternal { get; set; }
     public int Year { get; set; }
 
+    [BsonIgnore]
+    public OwnerDocument Owner { get; set; }
+
     public PropertyEntity ToDomainEntity()
     {
-        return new PropertyEntity(IdProperty, IdOwner, Name, Address, Price, CodeInternal, Year);
+        return new PropertyEntity(IdProperty, Owner.ToDomainEntity(), Name, Address, Price, CodeInternal, Year);
     }
 
     public static PropertyDocument ToPropertyDocument(PropertyEntity property)
     {
         return new PropertyDocument
         {
+            IdOwner = property.Owner.IdOwner,
             Name = property.Name,
             Address = property.Address,
             Price = property.Price,
