@@ -21,8 +21,11 @@ public class MongoDbContext
         );
         var client = new PropertyDbContext(dbContextOptions.Options);
         client.Database.EnsureCreated();
+
         _context = client;
     }
 
+    public PropertyDbContext propertiesContext => _context;
     public DbSet<PropertyDocument> Properties => _context.Properties;
+    public DbSet<OwnerDocument> Owners => _context.Owners;
 }

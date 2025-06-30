@@ -14,8 +14,12 @@ builder.Services.AddScoped<IPropertyRepository, MongoPropertyRepository>();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin()));
-
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<MongoDbContext>();
+    DataSeeder.Seed(dbContext);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

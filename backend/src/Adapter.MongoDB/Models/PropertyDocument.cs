@@ -8,20 +8,28 @@ public class PropertyDocument
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string IdProperty { get; set; }
-    public string IdOwner { get; set; }
-    public string Name { get; set; }
-    public string Address { get; set; }
+    public string IdProperty { get; set; } = string.Empty;
+    public string IdOwner { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
     public int Price { get; set; }
-    public string CodeInternal { get; set; }
+    public string CodeInternal { get; set; } = string.Empty;
     public int Year { get; set; }
 
     [BsonIgnore]
-    public OwnerDocument Owner { get; set; }
+    public OwnerDocument Owner { get; set; } = new OwnerDocument();
 
     public PropertyEntity ToDomainEntity()
     {
-        return new PropertyEntity(IdProperty, Owner.ToDomainEntity(), Name, Address, Price, CodeInternal, Year);
+        return new PropertyEntity(
+            IdProperty,
+            Owner.ToDomainEntity(),
+            Name,
+            Address,
+            Price,
+            CodeInternal,
+            Year
+        );
     }
 
     public static PropertyDocument ToPropertyDocument(PropertyEntity property)

@@ -15,7 +15,7 @@ public class PropertyController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<PropertyEntity>> GetPropertiesAsync()
+    public async Task<IEnumerable<PropertyDTO>> GetPropertiesAsync()
     {
         return await _propertyService.GetPropertiesAsync();
     }

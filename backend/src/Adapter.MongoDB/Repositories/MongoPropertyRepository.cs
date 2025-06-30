@@ -17,9 +17,8 @@ public class MongoPropertyRepository : IPropertyRepository
 
     public async Task<IEnumerable<PropertyEntity>> GetPropertiesAsync()
     {
-        // var documents = _context.Properties.AsEnumerable();
         var documents = await _database.Properties.ToListAsync();
-        // var documents = await _database.Properties.AsQueryable().ToListAsync();
+
         return documents.Select(doc => doc.ToDomainEntity());
     }
 }

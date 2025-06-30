@@ -2,5 +2,5 @@ namespace backend.Core;
 
 public interface IPropertyService
 {
-    Task<IEnumerable<PropertyEntity>> GetPropertiesAsync();
+    Task<IEnumerable<PropertyDTO>> GetPropertiesAsync();
 }

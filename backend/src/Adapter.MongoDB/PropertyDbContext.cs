@@ -18,7 +18,10 @@ public class PropertyDbContext : DbContext
         );
 
     public PropertyDbContext(DbContextOptions options)
-        : base(options) { }
+        : base(options)
+    {
+        Database.AutoTransactionBehavior = AutoTransactionBehavior.Never;
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,7 +29,8 @@ public class PropertyDbContext : DbContext
         modelBuilder.Entity<PropertyDocument>().ToCollection("properties");
         modelBuilder.Entity<OwnerDocument>().ToCollection("owners");
 
-        modelBuilder.Entity<PropertyDocument>()
+        modelBuilder
+            .Entity<PropertyDocument>()
             .HasOne(p => p.Owner)
             .WithMany()
             .HasForeignKey(p => p.IdOwner);

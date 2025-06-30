@@ -18,6 +18,18 @@ public class PropertyEntity
     //         Photo = photo;
     //         Birthday = birthday;
     //     }
+    public PropertyDTO ToDTO()
+    {
+        return new PropertyDTO
+        {
+            IdProperty = IdProperty,
+            Name = Name,
+            Address = Address,
+            Price = Price,
+            Year = Year,
+        };
+    }
+
     public PropertyEntity(
         string idProperty,
         Owner owner,
