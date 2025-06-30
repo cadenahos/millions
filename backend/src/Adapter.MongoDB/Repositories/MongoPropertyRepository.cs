@@ -19,6 +19,14 @@ public class MongoPropertyRepository : IPropertyRepository
     {
         var documents = await _database.Properties.ToListAsync();
 
+        foreach (var doc in documents)
+        {
+            doc.Owner = await _database.Owners.FirstOrDefaultAsync(o => o.IdOwner == doc.IdOwner);
+            doc.Images = await _database
+                .PropertyImages.Where(p => p.IdProperty == doc.IdProperty)
+                .ToListAsync();
+        }
+
         return documents.Select(doc => doc.ToDomainEntity());
     }
 }

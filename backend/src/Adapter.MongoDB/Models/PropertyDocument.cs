@@ -16,8 +16,15 @@ public class PropertyDocument
     public string CodeInternal { get; set; } = string.Empty;
     public int Year { get; set; }
 
-    [BsonIgnore]
-    public OwnerDocument Owner { get; set; } = new OwnerDocument();
+    [BsonElement("owner")]
+    public OwnerDocument Owner { get; set; } = null!;
+
+    [BsonElement("images")]
+    public ICollection<PropertyImageDocument> Images { get; set; } =
+        new List<PropertyImageDocument>();
+
+    [BsonElement("trace")]
+    public PropertyTraceDocument? Trace { get; set; }
 
     public PropertyEntity ToDomainEntity()
     {
@@ -29,7 +36,11 @@ public class PropertyDocument
             Price,
             CodeInternal,
             Year
-        );
+        )
+        {
+            Images = Images.Select(i => i.ToDomainEntity()).ToList(),
+            Trace = Trace?.ToDomainEntity(),
+        };
     }
 
     public static PropertyDocument ToPropertyDocument(PropertyEntity property)

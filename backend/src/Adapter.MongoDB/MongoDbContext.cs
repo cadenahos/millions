@@ -28,4 +28,6 @@ public class MongoDbContext
     public PropertyDbContext propertiesContext => _context;
     public DbSet<PropertyDocument> Properties => _context.Properties;
     public DbSet<OwnerDocument> Owners => _context.Owners;
+    public DbSet<PropertyImageDocument> PropertyImages => _context.PropertyImages;
+    public DbSet<PropertyTraceDocument> PropertyTraces => _context.PropertyTraces;
 }

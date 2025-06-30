@@ -1,9 +1,9 @@
 namespace backend.Core;
 
-public class PropertyTrace
+public class PropertyTraceEntity
 {
-    public Guid IdPropertyTrace { get; set; }
-    public Guid IdProperty { get; set; }
+    public string IdPropertyTrace { get; set; }
+    public string IdProperty { get; set; }
     public DateTime DateSale { get; set; }
     public string Name { get; set; }
     public decimal Value { get; set; }

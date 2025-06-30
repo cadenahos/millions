@@ -4,20 +4,14 @@ public class PropertyEntity
 {
     public string IdProperty { get; set; }
     public Owner Owner { get; set; }
+    public ICollection<PropertyImageEntity> Images { get; set; }
+    public PropertyTraceEntity Trace { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public int Price { get; set; }
     public string CodeInternal { get; set; }
     public int Year { get; set; }
 
-    // public Owner(string idOwner, string name, string? adress, string? photo, DateTime? birthday)
-    //     {
-    //         IdOwner = idOwner;
-    //         Name = name;
-    //         Adress = adress;
-    //         Photo = photo;
-    //         Birthday = birthday;
-    //     }
     public PropertyDTO ToDTO()
     {
         return new PropertyDTO
@@ -27,6 +21,7 @@ public class PropertyEntity
             Address = Address,
             Price = Price,
             Year = Year,
+            Image = Images.FirstOrDefault(),
         };
     }
 

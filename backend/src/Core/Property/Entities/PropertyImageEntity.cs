@@ -1,9 +1,9 @@
 namespace backend.Core;
 
-public class PropertyImage
+public class PropertyImageEntity
 {
-    public Guid IdPropertyImage { get; set; }
-    public Guid IdProperty { get; set; }
+    public string IdPropertyImage { get; set; }
+    public string IdProperty { get; set; }
     public string Url { get; set; }
     public bool Enabled { get; set; }
 }
