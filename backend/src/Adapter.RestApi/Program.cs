@@ -8,9 +8,9 @@ IConfiguration conectionString = builder.Configuration;
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddSingleton(_ => new MongoDbContext(conectionString));
-builder.Services.AddSingleton<IPropertyService, PropertyService>();
-builder.Services.AddSingleton<IPropertyRepository, MongoPropertyRepository>();
+builder.Services.AddScoped(_ => new MongoDbContext(conectionString));
+builder.Services.AddScoped<IPropertyService, PropertyService>();
+builder.Services.AddScoped<IPropertyRepository, MongoPropertyRepository>();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin()));

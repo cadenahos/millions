@@ -1,16 +1,16 @@
 using backend.Core;
+using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
-using MongoDB.Driver.Linq;
 
 namespace Adapter.MongoDB.Repositories;
 
 public class MongoPropertyRepository : IPropertyRepository
 {
-    private readonly PropertyDbContext _database;
+    private readonly MongoDbContext _database;
 
     //TO DO: add logging
 
-    public MongoPropertyRepository(PropertyDbContext database)
+    public MongoPropertyRepository(MongoDbContext database)
     {
         _database = database;
     }
@@ -19,6 +19,7 @@ public class MongoPropertyRepository : IPropertyRepository
     {
         // var documents = _context.Properties.AsEnumerable();
         var documents = await _database.Properties.ToListAsync();
+        // var documents = await _database.Properties.AsQueryable().ToListAsync();
         return documents.Select(doc => doc.ToDomainEntity());
     }
 }
